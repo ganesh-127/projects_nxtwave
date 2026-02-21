@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://ganeshlanding.ccbp.tech/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Landing Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            background: transparent;
+            padding: 20px 10%;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        header.scrolled {
+            background: #111;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+
+        .hero button {
+            padding: 12px 25px;
+            border: none;
+            background: white;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            background: #ddd;
+        }
+
+        .features {
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .features h2 {
+            margin-bottom: 40px;
+        }
+
+        .feature-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .feature-box {
+            flex: 1 1 300px;
+            background: #f4f4f4;
+            padding: 30px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+        }
+
+        /* ===== CTA Section ===== */
+        .cta {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .cta button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            border: none;
+            background: #667eea;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: white;
+        }
+
+        /* ===== Responsive ===== */
+        @media(max-width: 768px) {
+            nav ul {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background: #111;
+                width: 200px;
+                flex-direction: column;
+                display: none;
+                padding: 20px;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+<link rel="stylesheet" href="./ModernLandingPage_files/index.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="none,noarchive">
+</head>
+
+<body>
+    <header id="navbar">
+        <nav>
+            <h2>GanBrand</h2>
+            <ul id="menu">
+                <li><a href="https://ganeshlanding.ccbp.tech/#home">Home</a></li>
+                <li><a href="https://ganeshlanding.ccbp.tech/#features">Features</a></li>
+                <li><a href="https://ganeshlanding.ccbp.tech/#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="toggle">☰</div>
+        </nav>
+    </header>
+    <section class="hero" id="home">
+        <div>
+            <h1>Build Something Amazing</h1>
+            <p>Modern responsive landing page using HTML, CSS &amp; JavaScript.</p>
+            <button onclick="scrollToSection(&#39;features&#39;)">Get Started</button>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2>Our Features</h2>
+        <div class="feature-container">
+            <div class="feature-box">
+                <h3>Fast</h3>
+                <p>Optimized for performance and speed.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Responsive</h3>
+                <p>Works perfectly on all devices.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Modern</h3>
+                <p>Clean UI with smooth animations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta" id="contact">
+        <h2>Ready to Start?</h2>
+        <p>Join us today and build your future.</p>
+        <button>Contact Us</button>
+    </section>
+    <footer>
+        <p>© 2026 MyBrand. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById("toggle");
+        const menu = document.getElementById("menu");
+
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+        window.addEventListener("scroll", function() {
+            const navbar = document.getElementById("navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > 50);
+        });
+    </script>
+
+<script src="./ModernLandingPage_files/index.js.download"></script>
+
+
+</body></html>
