@@ -1,0 +1,30 @@
+Sudoku Solver using Backtracking
+
+Project Overview
+This project solves a 9x9 Sudoku puzzle using the Backtracking algorithm in Python.
+
+Backtracking tries all possible numbers (1–9) in empty cells and recursively explores valid configurations while pruning invalid ones.
+
+Concepts Used
+- Recursion
+- Backtracking
+- Constraint Validation
+- 2D Matrix Traversal
+- Problem-Solving Strategy
+
+Working
+1. Find an empty cell (0 is represented as an empty cell)
+2. Try numbers from 1 to 9
+3. Check if the number is valid:
+   - Not in same row
+   - Not in same column
+   - Not in same 3x3 grid
+4. Place number if valid
+5. Recursively solve remaining board
+6. Backtrack if stuck
+
+Time Complexity
+Worst Case: O(9^(n²))
+
+However, pruning significantly reduces practical runtime.
+python sudoku_solver.py
