@@ -1,7 +1,7 @@
 # Responsive Landing Page
 
 Live Demo
-https://your-live-link-here.com
+https://ganeshlanding.ccbp.tech/
 
 Project Overview
 This is a fully responsive landing page built using HTML, CSS, and JavaScript.  
@@ -22,5 +22,3 @@ Features
 
 Responsive Design
 The layout is built using Flexbox and media queries to ensure proper alignment across devices.
-
-## 📂 Folder Structure
